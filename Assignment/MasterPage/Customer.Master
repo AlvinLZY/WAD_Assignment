@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Customer.master.cs" Inherits="Assignment.Customer" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="~/styles/styleSheet.css"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <ul class="navigation">
+                <li><a href="Home.aspx">Home</a></li>           
+                <li><a href="Gallery.aspx">Gallery</a></li>                           
+                <li><a><%=Session["user"].ToString()%></a></li>           
+                <li><a href="logout.aspx">Log out</a></li>           
+            </ul>
+        </div>
+    </header>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
