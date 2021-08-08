@@ -17,6 +17,8 @@
                 <li><a href="Gallery.aspx">Gallery</a></li>                           
                 <li><a href="Register.aspx">Register</a></li>           
                 <li><a href="Login.aspx">Login</a></li>           
+                <li><a href="\Pages\Artist\UploadNewArtwork.aspx">Artist_Upload</a></li>           
+                <li><a href="\Pages\Artist\Gallery.aspx">Gallery</a></li>           
             </ul>
         </div>
     </header>
