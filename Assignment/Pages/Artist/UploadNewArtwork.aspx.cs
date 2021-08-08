@@ -68,7 +68,7 @@ namespace Assignment.Pages
                     #endregion
 
                     con.Open();
-                    query = string.Format("INSERT INTO Image VALUES ('{0}',@Image,'{1}','{2}')", artworkName, desc, unitPrice.ToString("#.##"));
+                    query = string.Format("INSERT INTO ImageDB VALUES ('{0}',@Image,'{1}','{2}')", artworkName, desc, unitPrice.ToString("#.##"));
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Image", SqlDbType.Image).Value = imgArray;
                     cmd.ExecuteNonQuery();

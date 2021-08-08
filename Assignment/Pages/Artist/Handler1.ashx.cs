@@ -18,7 +18,7 @@ namespace Assignment.Pages.Artist
         {
             string displayImgId = context.Request.QueryString["id_Image"].ToString();
             glr.con.Open();
-            string query = "Select Image FROM Image where id=" + displayImgId;
+            string query = "Select Image FROM ImageDB where id=" + displayImgId;
             SqlCommand cmd = new SqlCommand(query, glr.con);
             SqlDataReader dr = cmd.ExecuteReader();
 

@@ -22,13 +22,15 @@ namespace Assignment.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.Open();
-            String query = "SELECT Image FROM Image";
-            SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            gvArtwork.DataSource = dr;
-            gvArtwork.DataBind();
-
+            if (!IsPostBack)
+            {
+                con.Open();
+                String query = "SELECT * FROM ImageDB";
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                gvArtwork.DataSource = dr;
+                gvArtwork.DataBind();
+            }
         }
     }
 }
